@@ -1,0 +1,21 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    text-align: center;
+    }
+
+.entryContainer{
+   display:flex;
+   flex-direction: column-reverse;
+   margin-top:40px;
+}    
+
+    .salesTitle{
+        text-align: center;
+    }
+  li{ 
+      list-style: none;
+  }

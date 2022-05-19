@@ -1,0 +1,41 @@
+.circle-Widget {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px;
+  }
+
+
+  #widget-container {
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    display: flex;
+    width:90%;
+}
+#widget-container >div {
+    width: 150px;
+    height: 150px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    background-color: rgb(91, 157, 153);
+    
+}
+span {
+    width: 100%;
+    display: inline-block;
+    font-size: 10;
+    line-height: 2
+}
+
+.widgetNumber{
+  line-height: 150px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 45px;
+  text-align: center;
+}
