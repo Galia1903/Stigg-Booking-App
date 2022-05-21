@@ -3,9 +3,7 @@ import TopWidgets from './TopWidgets';
 import SearchBar from './SearchBar';
 import LeaderBoard from './LeaderBoard';
 
-import logo from './logo.svg';
 import './App.css';
-
 
 
 function App() {
@@ -14,6 +12,7 @@ function App() {
     (<div>
         <TopWidgets />
         <LeaderBoard />
+        <div id="search-list"></div>
     </div>)
   );
 }
