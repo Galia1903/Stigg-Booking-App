@@ -6,8 +6,7 @@ function TopWidgets() {
   const [bookingSnapshot, setBookingSnapshot] = useState([]);
   useEffect(() => {
       const timerId = setInterval(() => {
-          fetch(
-                  "https://interview-booking-api.herokuapp.com/api/booking-snapshot")
+          fetch("https://interview-booking-api.herokuapp.com/api/booking-snapshot")
               .then((res) => res.json())
               .then((json) => {
                   const tempSnapshot = [];
