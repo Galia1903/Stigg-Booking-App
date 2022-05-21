@@ -4,8 +4,7 @@ import './LeaderBoard.css';
 function LeaderBoard() {
     const [employees, setEmployees] = useState({});
     useEffect(() => {
-        fetch(
-                "https://interview-booking-api.herokuapp.com/api/bookings")
+        fetch("https://interview-booking-api.herokuapp.com/api/bookings")
             .then((res) => res.json())
             .then((json) => {
                 let tempEmployees = {};
