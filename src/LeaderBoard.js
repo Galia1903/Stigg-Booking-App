@@ -152,7 +152,7 @@ useEffect(() => {
             <h2 className='salesTitle'>Salespersons Leaderboard</h2>
             <input className="search  tField"  type = "text" value = {searchString} onChange = {handleSearchChange} placeholder = "Search" />
             <div>
-             <div className="parent"> 
+             <div className="parent titles"> 
             <h3>Place</h3>
             <h3>Name</h3>
             <h3>Total booking hours</h3>
@@ -161,7 +161,7 @@ useEffect(() => {
             <div className="entryContainer">
                 {/* {topBookingSort(filterEmployees()).map((employee,index) => { */}
                 {topBookingSort(employees).map((employee,index) => {
-		          return  <div key={index} className="parent">
+		          return  <div key={index} className="parent line">
 		     
 		                     
             <div>#{10-index} </div>

@@ -28,8 +28,10 @@ function TopWidgets() {
          return ( <div  className="circle-Widget" key={index}>
             <span className='widgetTitle'>{item[0]}</span>
             <span className='widgetNumber'>{item[1]}</span> 
-        </div>)
+        </div>
+        )
        })}
+       
      </div>)
 
     ); 

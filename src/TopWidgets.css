@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 70px;
   }
 
 
@@ -14,23 +13,38 @@
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines;
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width:90%;
+    margin: 20px auto 70px auto;
+   
 }
-#widget-container >div {
+.circle-Widget {
     width: 150px;
     height: 150px;
     vertical-align: top;
     display: inline-block;
-    *display: inline;
     zoom: 1;
-    background-color: rgb(91, 157, 153);
+    margin:10px 5px 30px 5px;
+    position:relative;
+
+    background-color: var(--green);
+    color:var(--darkBlue);
+    box-shadow: 0 3px 3px rgba(0,0,0,.3);
     
 }
 span {
     width: 100%;
     display: inline-block;
-    font-size: 10;
-    line-height: 2
+}
+
+.widgetTitle{
+  position: absolute;
+  top:160px;
+  width:150px;
+  text-align: center;
+  color:var(--blue);
+  font-weight: 300;
 }
 
 .widgetNumber{
