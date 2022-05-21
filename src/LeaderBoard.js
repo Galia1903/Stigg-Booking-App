@@ -4,7 +4,6 @@ import './LeaderBoard.css';
 function LeaderBoard() {
     const [employees, setEmployees] = useState({});
     useEffect(() => {
-        //  const timerId2 = setInterval(() => {
         fetch(
                 "https://interview-booking-api.herokuapp.com/api/bookings")
             .then((res) => res.json())
@@ -40,8 +39,6 @@ function LeaderBoard() {
                     }
                 })
             })
-        // }, 2000);
-        // // return () => clearInterval(timerId2);
     }, []);
 
     //calculate booking hours
