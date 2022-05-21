@@ -36,7 +36,7 @@ function LeaderBoard() {
                             tempEmployees[empId].bookings[bookId] = booking;
                         }
                         setEmployees(tempEmployees);
-                        setItems(topBookingSort(tempEmployees));
+                        setItems(topBookingSort(tempEmployees).slice(5, 10));
                     }
                 })
             })
@@ -81,6 +81,7 @@ function LeaderBoard() {
         employeesWithHourSum = bookingHoursSum(employees).sort(function(a, b) {
             return a[1][1] - b[1][1];
         });
+
         return employeesWithHourSum;
     }
 
@@ -118,31 +119,28 @@ function LeaderBoard() {
     }
 
     const filterIt = (terms, arr) => {
-        if ("" === terms || terms.length < 3) return arr;
+        if ("" === terms || terms.length < 3) return arr.slice(5, 10);
         const words = terms.match(/\w+|"[^"]+"/g);
         words.push(terms);
         return arr.filter((a) => {
             const v = Object.values(a[0][1]);
             const f = JSON.stringify(v).toLowerCase();
-
             return words.every(val => f.includes(val));
         });
     };
 
     const [items, setItems] = useState([]);
-    const filterList = ({
-        target
-    }) => {
+    const filterList = ({target}) => {
         const searchQuery = target.value.toLowerCase();
         const updatedList = filterIt(searchQuery, topBookingSort(employees));
         setItems(updatedList);
     };
 
     const list = ( items ) => {
-        return (<ul>
+        return (<ul className="entryContainer">
         {items.map((item,index) => (
             <div key={index} className="parent line">                
-            <div>#{10-index} </div>
+            <div>#{5-index} </div>
             <div >{item[0][1].fName} {item[0][1].lName}</div>     
             <div>{item[1][1]}</div>         
             <div>{item[2][1]}</div>      
